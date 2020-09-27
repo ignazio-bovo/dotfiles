@@ -4,23 +4,17 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'scrooloose/nerdcommenter'
-Plug 'vim-scripts/indentpython.vim'
 Plug 'scrooloose/nerdtree'
 Plug 'tpope/vim-fugitive'
 Plug 'jmcantrell/vim-virtualenv'
-Plug 'vimwiki/vimwiki'
-Plug 'NLKNguyen/papercolor-theme'
 Plug 'airblade/vim-gitgutter'
-Plug 'lervag/vimtex'
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
-
 call plug#end()
 
+colo simple_coding
 set t_Co=256   " This is may or may not needed.
 
-set background=light
-colorscheme PaperColor
 " }}} 
 " ---- MISC {{{
 "more characters will be sent to the screen for redrawing
@@ -89,12 +83,6 @@ nnoremap <silent> <Space> @=(foldlevel('.')?'za':"\<Space>")<CR>
 vnoremap <Space> zf
 " }}}
 " ---- MODES {{{
-let g:tex_flavor='latex'
-if has('nvim')
-  let g:vimtex_compiler_progname = 'pdflatex'
-endif
-let g:vimtex_quickfix_mode=0
-
 let g:UltiSnipsExpandTrigger = '<tab>'
 let g:UltiSnipsJumpForwardTrigger = '<tab>'
 let g:UltiSnipsJumpBackwardTrigger = '<C-h>'
