@@ -1,0 +1,11 @@
+;; -*- mode:emacs-lisp; coding: utf-8-emacs; -*-
+;; Gnus startup file.
+;; Never delete this file -- if you want to force Gnus to read the
+;; .newsrc file (if you have one), touch .newsrc instead.
+(setq gnus-newsrc-file-version "Gnus v5.13")
+
+(setq gnus-newsrc-last-checked-date '"Tue, 25 Jan 2022 10:57:39 +0100")
+
+(setq gnus-newsrc-alist '(("nnimap+151.236.218.173:Templates" 3 nil ((unexist)) "nnimap:151.236.218.173" ((modseq . "1") (uidvalidity . "1638173246") (active 1 . 0) (permanent-flags %Answered %Flagged %Deleted %Seen %Draft %*))) ("nnimap+151.236.218.173:Drafts" 3 nil ((unexist)) "nnimap:151.236.218.173" ((modseq . "1") (uidvalidity . "1638173249") (active 1 . 0) (permanent-flags %Answered %Flagged %Deleted %Seen %Draft %*))) ("nnimap+151.236.218.173:INBOX" 3 ((1 . 34)) ((unexist) (seen (31 . 33))) "nnimap:151.236.218.173" ((modseq . "65") (uidvalidity . "1638173245") (active 1 . 34) (permanent-flags %Answered %Flagged %Deleted %Seen %Draft $has_cal %*))) ("nnimap+151.236.218.173:Sent" 3 nil ((unexist)) "nnimap:151.236.218.173" ((modseq . "1") (uidvalidity . "1638173248") (active 1 . 0) (permanent-flags %Answered %Flagged %Deleted %Seen %Draft %*))) ("nnimap+151.236.218.173:Trash" 3 nil ((unexist)) "nnimap:151.236.218.173" ((modseq . "1") (uidvalidity . "1638173247") (active 1 . 0) (permanent-flags %Answered %Flagged %Deleted %Seen %Draft %*))) ("nndraft:drafts" 1 nil nil (nndraft "") ((gnus-dummy (gnus-draft-mode))))))
+
+(setq gnus-server-alist '(("archive" nnfolder "archive" (nnfolder-directory "~/Mail/archive") (nnfolder-active-file "~/Mail/archive/active") (nnfolder-get-new-mail nil) (nnfolder-inhibit-expiry t))))

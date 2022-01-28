@@ -1,0 +1,16 @@
+* system
+** Install exwm and use it
+
+** Install Embark & other completion systems
+** Solve fan control?
+
+** Learn to use guix*
+
+* Work
+** DONE Bucket issue content side fix
+** TODO Final review of bucket issue content side + compiling
+** TODO Open PR for review
+** TODO Review [[https://github.com/Joystream/joystream/pull/2537][forum thread tags]]
+** TODO [[https://github.com/Joystream/joystream/issues/2890][Combine new content directory into Giza runtime]]
+** TODO [[https://github.com/Joystream/joystream/issues/2890][on chain membership migration into olympia]]
+

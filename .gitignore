@@ -1,0 +1,6 @@
+.emacs.d/straight/*
+.emacs.d/auto-save-list/*
+.emacs.d/backups/*
+.emacs.d/elpa/*
+.emacs.d/emojis/*        
+    

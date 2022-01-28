@@ -1,0 +1,11 @@
+:PROPERTIES:
+:ID:       30607b66-ca55-48c3-ab0d-f0a807275f6d
+:END:
+#+title: olympusDAO
+Olympus is solving the problem of creating a new
+currency through internal coordination between different
+stakeholders within the protocol, with no policies enforced
+by a central entity. It does so by solving an instance of
+the [[id:23b297a9-203e-4816-89f7-4da05b029b81][iterated prisoner dilemma]]. [[id:46094152-a461-48ce-a976-8e932458b6f2][tft]] provides the best solution to the game.
+Given that each player A,B plays TFT it remains to promote cooperation for
+A,B in the first round, i.e. a[1] = b[1] = COOPERATE

@@ -1,0 +1,147 @@
+* Create channel [17/17]
+** DONE u.c.c. w/ Lead context
+** DONE u.c.c. w/ Collaborator context
+** DONE s.c.c. w/ Member context
+** DONE s.c.c. w/ Curator context
+** DONE u.c.c. w/ uncorresponding member id and origin
+** DONE u.c.c. w/ uncorresponding curator id and origin
+** DONE s.c.c. w/ storage upload and member context
+** DONE s.c.c. w/ storage upload and curator context
+** DONE u.c.c. w/ invalid expected data size fee
+** DONE u.c.c. w/ not enough balance
+** DONE u.c.c. w/ with no bucket available due to object size
+** DONE u.c.c. w/ with no bucket available due to object number
+** DONE u.c.c. w/ with assets exceeding max object size voucher limits
+** DONE u.c.c. w/ with assets exceeding max object number voucher limits
+** DONE s.c.c. w/ collaborator set
+** DONE u.c.c. w/ invalid set
+** DONE s.c.c. w/ reward account
+* Update channel [41/41]
+** DONE u.c.u. w/ uncorresponding member id and origin
+** DONE s.c.u. w/ uncorresponding collaborator member id and origin
+** DONE u.c.u. w/ uncorresponding curator id and origin
+** DONE s.c.u. w/ assets uploaded by collaborator
+** DONE s.c.u. w/ assets removal by collaborator
+** DONE s.c.u. w/ assets uploaded by Lead
+** DONE s.c.u. w/ assets removal by Lead
+** DONE s.c.u. w/ assets uploaded by member
+** DONE s.c.u. w/ assets removal by member
+** DONE s.c.u. w/ assets uploaded by curator
+** DONE s.c.u. w/ assets removal by curator
+** DONE u.c.u. w/ assets uploaded by non authorized collaborator
+** DONE u.c.u. w/ assets removed by non authorized collaborator
+** DONE u.c.u. w/ assets uploaded by non authorized member
+** DONE u.c.u. w/ assets uploaded by non authorized curator
+** DONE u.c.u. w/ assets removed by non authorized member
+** DONE u.c.u. w/ assets removed by non authorized curator
+** DONE u.c.u. w/ assets uploaded by Lead
+** DONE u.c.u. w/ assets removed by Lead
+** DONE s.c.u. w/ collaborator set updated by member owner
+** DONE u.c.u. w/ collaborator set updated by non authorized member
+** DONE s.c.u. w/ collaborator set updated by curator owner
+** DONE u.c.u. w/ collaborator set updated by non authorized curator
+** DONE u.c.u. w/ collaborator set updated by collaborator member
+** DONE u.c.u. w/ collaborator set updated by Lead and member owner
+** DONE s.c.u. w/ collaborator set updated by Lead and curator owner
+** DONE s.c.u. w/ reward account updated by member owner
+** DONE s.c.u. w/ reward account updated by curator owner
+** DONE u.c.u. w/ reward account updated by unauthorized member
+** DONE u.c.u. w/ reward account updated by unauthorized curator
+** DONE u.c.u. w/ reward account updated by collaborator member
+** DONE u.c.u. w/ reward account updated by Lead and member owner
+** DONE u.c.u. w/ reward account updated by Lead and curator owner
+** DONE u.c.u. w/ invalid data objects to remove
+** DONE u.c.u. w/ invalid expected data size fee
+** DONE u.c.u. w/ not enough balance
+** DONE u.c.u. w/ with no bucket available due to object size
+** DONE u.c.u. w/ with no bucket available due to object number
+** DONE u.c.u. w/ with assets exceeding data limits
+** DONE u.c.u. w/ invalid collaborator set
+** DONE u.c.u. w/ invalid channel id
+* Delete channel [11/11]
+** DONE u.c.d. w/ Lead context member owner
+** DONE s.c.d. w/ Lead context curator owner
+** DONE u.c.d. w/ Collaborator context
+** DONE s.c.d. w/ Member context
+** DONE s.c.d. w/ Curator context
+** DONE u.c.d. w/ uncorresponding member id and origin
+** DONE u.c.d. w/ uncorresponding curator id and origin
+** DONE u.c.d. w/ unauthorized member
+** DONE u.c.d. w/ unauthorized curator
+** DONE u.c.d. w/ invalid channel id
+** DONE u.c.d. w/ uncorresponding num objects to delete
+* Create video [18/18]
+** DONE s.v.c. w/ Lead context w/ assets
+** DONE s.v.c. w/ Collaborator context w/ assets
+** DONE s.v.c. w/ Member context w/ assets
+** DONE s.v.c. w/ Curator context w/ assets
+** DONE u.v.c. w/ with lead auth failure (uncorresponding id and origin)
+** DONE u.v.c. w/ with collaborator auth failure (uncorresponding id and origin)
+** DONE u.v.c. w/ with member auth failure (uncorresponding id and origin)
+** DONE u.v.c. w/ with curator auth failure (uncorresponding id and origin)
+** DONE u.v.c. w/ with valid but unauth member 
+** DONE u.v.c. w/ with valid but unauth curator
+** DONE u.v.c. w/ with valid but unauth collaborator
+** DONE u.v.c. w/ lead but member owned channel
+** DONE u.v.c. w/ invalid channel id
+** DONE u.v.c. w/ invalid expected data size fee
+** DONE u.v.c. w/ not enough balance
+** DONE u.v.c. w/ with no bucket available due to object size
+** DONE u.v.c. w/ with no bucket available due to object number
+** DONE u.v.c. w/ with assets exceeding max object size voucher limits
+* Update video [23/23]
+** DONE s.v.u. w/ Lead context w/ assets upload
+** DONE s.v.u. w/ Collaborator context w/ assets upload
+** DONE s.v.u. w/ Member context w/ assets upload
+** DONE s.v.u. w/ Curator context w/ assets upload 
+** DONE s.v.u. w/ Lead context w/ assets removal
+** DONE s.v.u. w/ Collaborator context w/ assets removal
+** DONE s.v.u. w/ Member context w/ assets removal
+** DONE s.v.u. w/ Curator context w/ assets removal 
+** DONE u.v.u. w/ with lead auth failure (uncorresponding id and origin)
+** DONE u.v.u. w/ with collaborator auth failure (uncorresponding id and origin)
+** DONE u.v.u. w/ with member auth failure (uncorresponding id and origin)
+** DONE u.v.u. w/ with curator auth failure (uncorresponding id and origin)
+** DONE u.v.u. w/ with valid but unauth member 
+** DONE u.v.u. w/ with valid but unauth curator
+** DONE u.v.u. w/ with valid but unauth collaborator
+** DONE u.v.u. w/ lead but member owned channel
+** DONE u.v.u. w/ invalid expected data size fee
+** DONE u.v.u. w/ not enough balance
+** DONE u.v.u. w/ with no bucket available due to object size
+** DONE u.v.u. w/ with no bucket available due to object number
+** DONE u.v.u. w/ with assets exceeding max data object size limits
+** DONE u.v.u. w/ with invalid video id
+** DONE u.v.u. w/ with invalid object ids
+* Delete video [12/12]
+** DONE s.v.u. w/ Member context w/ assets removal
+** DONE s.v.u. w/ Curator context w/ assets removal
+** DONE u.v.u. w/ Lead context w/ member owned channel
+** DONE s.v.u. w/ Lead context w/ curator owned channel
+** DONE u.v.u. w/ Collaborator context
+** DONE u.v.u. w/ with member auth failure (uncorresponding id and origin)
+** DONE u.v.u. w/ with curator auth failure (uncorresponding id and origin)
+** DONE u.v.u. w/ with lead auth failure
+** DONE u.v.u. w/ with valid but unauth member
+** DONE u.v.u. w/ with valid but unauth curator
+** DONE u.v.u. w/ with invalid video id
+** DONE u.v.u. w/ with invalid object ids
+* Create dynamic bag with objects constraints [16/16]
+** DONE u.b.c. w/ existing bag id
+** DONE u.b.c. w/ insufficient balance for bag prize and total upload fee
+** DONE u.b.c. w/ different accounts for deletion prize and params
+** DONE u.b.c. w/ different dynamic bag id and params bag id specified
+** DONE u.b.c. w/ zero object size
+** DONE u.b.c. w/ size exceeding max data object size
+** DONE u.b.c. w/ insufficient bucket size availability
+** DONE u.b.c. w/ insufficient bucket objects num availability
+** DONE u.b.c. w/ no bucket accepting bags
+** DONE u.b.c. w/ empty ipfs id
+** DONE u.b.c. w/ empty objects list
+** DONE u.b.c. w/ ipfs id blacklisted
+** DONE u.b.c. w/ invalid expected data size fee
+** DONE u.b.c. w/ global upload block
+** DONE s.b.c. w/ no deletion prize but with objects upload
+** DONE s.b.c. w/ with full specification
+
+

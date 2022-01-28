@@ -1,0 +1,1 @@
+("~/.dotfiles/" "~/" "~/developer/joystream/" "~/Documents/org/olympia/" "~/developer/experiments/" "~/.emacs.d/straight/repos/almost-mono-themes/" "~/developer/ignazio-bovo/" "~/Downloads/docker-bitlbee/" "~/developer/website/" "~/Documents/org/giza/")

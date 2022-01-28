@@ -1,0 +1,8 @@
+:PROPERTIES:
+:ID:       f5dffa6e-b7f8-4418-b02c-969a35479541
+:END:
+#+title: olympusDAO model
+Two [[id:69d75332-8c9f-40f8-9565-14fdf5df153d][rational]] players with 3 possible actions:
+- *stake* (buy), expansion in supply/price anticipation
+- *sell*, contraction in supply/price anticipation
+- *bond*, players have no strong directional bias about supply/price

@@ -1,0 +1,28 @@
+#!/usr/bin/env bash
+set -e
+
+## Run a local development chain
+docker-compose up -d joystream-node
+
+# Init the chain with 2 storage buckets that have high limits set
+# The DynamicBagPolicy for Channel should be "numberOfStorageBuckets: 2" after this step is done
+./tests/network-tests/run-test-scenario.sh giza-issue-reproduction-setup
+
+# Set env for CLI's
+export AUTO_CONFIRM=true
+export ACCOUNT_URI=//testing//worker//Storage//0 # Storage lead account uri for storage CLI
+
+# Setup the CLI:
+yarn joystream-cli api:setUri ws://localhost:9944
+yarn joystream-cli account:choose --address 5GrwvaEF5zXb26Fz9rcQpDWS57CtERHpNehXCPcNoHGKutQY
+yarn joystream-cli api:setQueryNodeEndpoint http://localhost:8081/graphql
+
+
+yarn storage-node dev:init
+yarn storage-node leader:update-bag-limit -l 7 --dev
+yarn storage-node leader:update-voucher-limits -o 100 -s 10000000 --dev
+yarn storage-node leader:create-bucket -i=0 -a -n=1 -s=100  --dev
+yarn storage-node operator:accept-invitation -w=0 -i=0 --dev
+yarn storage-node leader:update-dynamic-bag-policy -t Channel -n 1
+
+yarn joystream-cli content:createChannel --context Member -i ./cli/examples/content/CreateChannel.json

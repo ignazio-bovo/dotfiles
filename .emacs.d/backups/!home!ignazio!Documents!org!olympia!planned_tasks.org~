@@ -1,0 +1,210 @@
+#+OPTIONS: prop:t
+#+TOC:nil
+* DONE Epic 1: Giza content refactor
+:PROPERTIES:
+:id: Epic.1
+:DURATION: 5 days
+:Depends_on: None
+:Influences: Epic.2
+:Approx_start_date: <2022-01-01 Sat>
+:Approx_end_date: <2022-01-07 Fri>
+:issue_link: https://github.com/Joystream/joystream/issues/2983
+:END:
+** Brief description
+Permission have been already refactored. I just wanted to refactor some testing code, which is
+already happening in the Giza extra unit testing that I am currently doing. Refactor should not
+break current runtime types but it might add some function to the content Module interface to
+avoid code duplication
+** Epic breakdown
+*** Tests for {create,update,delete} x {channel,video} planning & implementation
+:PROPERTIES:
+:id: Epic.1.1
+:END:
+**** Risks
+one Issue discovered, but easily fixed (reported on the github issue)
+*** Tests for =create_dynamic_bag_with_objects_constraints= planning & implementation
+:PROPERTIES:
+:id: Epic.1.2
+:END:
+**** Risks
+couple Issues discovered, but easily fixed (reported on the github issue)
+*** Tests for remaining content part  planning & implementation
+:PROPERTIES:
+:id: Epic.1.3
+:END:
+Less important part, just refactoring tests using the Fixture framework
+**** Risks
+None
+
+* TODO Epic 2: Merge: Giza -> scalable channel payouts & Video Comments reation => Branch1
+:PROPERTIES:
+:id: Epic.2
+:DURATION: 3 days
+:Depends_on: [[id:Epic.1]]
+:Influences: [[id:Epic.3]], Query Node
+:Approx_start_date: <2022-01-10 Mon>
+:Approx_end_date: <2022-01-12 Wed>
+:END:
+** Epic breakdown
+*** Conflicts solving
+:PROPERTIES:
+:id: Epic.2.1
+:DURATION: 1 day
+:END:
+**** Risks
+Permission module has changed, in order to account for the new collaborator feature. Need
+to integrate permission for comments & reaction (should be easy).
+*** (Optional) Testing Planning & implementation
+:PROPERTIES:
+:id: Epic.2.2
+:DURATION: 1 day
+:END:
+Mainly refactoring in order to integrate old tests with current Fixture-based unit testing
+framework
+*** Review
+:PROPERTIES:
+:id: Epic.2.3
+:DURATION: 1 day
+:END:
+
+* Epic 3: Merge: Branch1 -> Video NFTs => Output
+:PROPERTIES:
+:id: Epic.3
+:DURATION: 5 days
+:Depends_on: [[id:Epic.2]]
+:Influences: [[id:Epic.4]], Query Node
+:Approx_start_date: <2022-01-17 Mon>
+:Approx_end_date: <2022-01-21 Fri>
+:END:
+** Epic breakdown
+*** Background research & planning
+:PROPERTIES:
+:id: Epic.3.1
+:DURATION: 1 days
+:END:
+*** Conflicts solving
+:PROPERTIES:
+:id: Epic.3.1
+:DURATION: 2 day
+:END:
+**** Risks
+- Permission module has changed, in order to account for the new collaborator feature.
+  an explicity guard for managing nft has been introduced so I presume it should not be too complex
+- Also the main =lib.rs= module should not represent a problem. Since most of the work is done
+  on separate extrinsics.
+*Bottomline*: both risks should be manageable
+*** Review
+:PROPERTIES:
+:id: Epic.3.3
+:DURATION: 2 day
+:END:
+* Epic 4: Merge Giza and new content directory into olympia runtime
+:PROPERTIES:
+:id: Epic.4
+:DURATION: 1 days
+:Depends_on: [[id:Epic.3]]
+:Influences: Query Node
+:Approx_start_date: <2022-01-24 Mon>
+:Approx_end_date: <2022-01-25 Mon>
+:END:
+** Brief description
+Merge: Ouput -> Olympia. Olympia has an older version of the content module
+** Epic breakdown
+*** Conflict resolution
+:PROPERTIES:
+:id: Epic.4.1
+:END:
+**** Risks
+Olympia and Giza content directory do not differ. No significant risks ahead
+*** Review
+:PROPERTIES:
+:id: Epic.4.2
+:DURATION: 1 day
+:END:
+* Epic 5: Sending funds to a working group budget
+:PROPERTIES:
+:id: Epic.5
+:DURATION: 2 days
+:Depends_on: None
+:Influences: Query Node
+:Approx_start_date: <2022-01-26 Tue>
+:Approx_end_date: <2022-01-27 Wed>
+:END:
+** Description
+Send funds from arbitrary JS member account to the budget of a working group.
+This work should consist in adding one extrinsic to the =runtime-modules/working-grop= pallet.
+This is a new feature to add
+** Risks
+- No relevant risks overall, since this feature has no dependencies and no influence
+** Epic Breakdown
+*** Planning
+:PROPERTIES:
+:id: Epic.5.1
+:DURATION: 2h
+:END:
+*** Implementation
+:PROPERTIES:
+:id: Epic.5.2
+:DURATION: 3h
+:END:
+*** Unit Testing
+:PROPERTIES:
+:id: Epic.5.3
+:DURATION: 2h
+:END:
+*** Review
+:PROPERTIES:
+:id: Epic.5.4
+:DURATION: 1 day
+:END:  
+
+* Epic 6: On chain memberhip migration into Olympia
+:PROPERTIES:
+:id: Epic.6
+:DURATION: 1 day
+:Depends_on: None
+:Influences: Query Node
+:Approx_start_date: <2022-01-27 Thu>
+:Approx_start_date: <2022-01-30 Sun>
+:END:
+** Brief description
+Currently a member is related for example to a channel that owns. We want to migrate existing
+membership from Giza to Olympia. We need also to preserve relationship to other
+entities outstanding (eg the channel owned by a member).
+The current details of the work are not very clear to me yet, partial due to my understanding
+I might need to schedule a call with Mokhtar/Bedeho. This is the last task in the queue.
+In light of the last call we might also avoid membership migration
+** Epic Breakdown
+*** Decide wheather we want or not to migrate membership relation from Giza to Olympia
+:PROPERTIES:
+:id: Epic.6.1
+:END:
+*** Planning
+:PROPERTIES:
+:id: Epic.6.1
+:END:
+*** Implementation
+**** Risks
+Getting this migration wrong might cause member to lose ownership relation to outstanding entities
+in the Joystream Runtime.
+
+* Epic 7: Reviews requested 
+:PROPERTIES:
+:id: Epic.7
+:Depends_on: None
+:Influences: None
+:END:
+Bunch of reviews requested by Shamil
+** Epic Breakdown
+*** Olympia change quorum and threshold algorithm, alter effect of abstention
+:PROPERTIES:
+:link: https://github.com/Joystream/joystream/pull/2974
+:END:
+*** runtime: Delete memo pallet
+:PROPERTIES:
+:link: https://github.com/Joystream/joystream/pull/2973
+:END:
+*** Olympia. Runtime. Bounty pallet: fix bounty and work entry association
+:PROPERTIES:
+:link: https://github.com/Joystream/joystream/pull/2972
+:END:

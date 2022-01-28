@@ -1,0 +1,84 @@
+#+TAGS: personal_finance fitness misc hobby inbox travel
+
+* TODO Lecter
+SCHEDULED: <2022-02-03 Thu 12:15 ++1w>
+:PROPERTIES:
+:LAST_REPEAT: [2022-01-27 Thu 12:10]
+:END:
+- State "DONE"       from "TODO"       [2022-01-27 Thu 12:10]
+- State "DONE"       from "TODO"       [2022-01-22 Sat 09:31]
+- State "DONE"       from "TODO"       [2022-01-13 Thu 20:05]
+  
+* TODO Emacs environment [41%]
+- [X] cargo format
+- [X] lsp support
+- [X] cargo check
+- [ ] github automatic authentications
+- [ ] stop fan starting at given time
+- [X] work mail on gnus
+- [X] setup nice agenda view with deadlines & tags
+- [ ] learn to use eww efficiently
+- [ ] keybase 
+
+* TODO Org Roam setup [0%]
+:PROPERTIES:
+:id: org_roam_id
+:END:
+- [ ] Read carefully DeFi newsletter
+- [ ] org roam display equation nicely
+- [ ] org roam display images
+- [ ] org roam run python plot code  
+
+* DONE Tenerife bus ticket                                           :travel:
+SCHEDULED: <2022-01-18 Tue 13:00>
+
+* DONE plan things to do for the next week                           :travel:
+SCHEDULED: <2022-01-17 Mon 13:00>
+
+* TODO emacs irc chat [20%]
+SCHEDULED: <2022-01-28 Fri 16:30> DEADLINE: <2022-02-01 Tue>
+- [ ] theme erc
+- [X] join one irc channel
+- [ ] get rocket chat on erc
+- [ ] find a cypherpunk irc channel
+- [ ] have a irc cheat sheet ready
+
+* DONE plan workouts                                                :fitness:
+SCHEDULED: <2022-01-27 Thu 16:30>
+
+* TODO cypherpunk tracker [10%]
+- [ ] install a decent linux distribution, like alpine
+- [ ] create a hardware wallet and learn how to use it
+- [ ] make a list about things you want to work on such distribution
+- [ ] have a sourcehut account with your dot files
+- [ ] get a cool nick like alexander supertramp
+- [X] get a pgp key and pubblish it
+- [ ] setup gnus so that sending text mail is easy
+- [ ] setup a digital ocean mail server
+- [ ] setup a digital ocean vpn
+- [ ] setup a website and host it anonymously
+
+* DONE help gabri with interview
+SCHEDULED: <2022-01-26 Wed 17:30>
+
+* TODO install a decent linux distribution, like alpine
+SCHEDULED: <2022-01-28 Fri 17:00>
+* TODO create a hardware wallet and learn how to use it
+SCHEDULED: <2022-02-08 Tue 15:30>
+- [ ] order a usb key from amazon
+- [ ] how do I create my own hard wallet
+- [ ] best softaware wallet
+- [ ] can I collect such wallet with metamask ETH
+- [ ] can I collect such wallet with solana wallets
+* TODO Distro planning
+SCHEDULED: <2022-01-28 Fri 17:00>
+- [ ] things you want to migrate
+- [ ] which distribution
+- [ ] essential things you cannot live without
+
+* DONE asana emacs sync
+SCHEDULED: <2022-01-27 16:30 Thu>
+
+* TODO passport info
+SCHEDULED: <2022-01-29 6:30 Sat>
+

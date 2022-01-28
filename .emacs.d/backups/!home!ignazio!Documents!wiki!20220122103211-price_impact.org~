@@ -1,0 +1,48 @@
+:PROPERTIES:
+:ID:       d1d9cc10-b005-4f00-adae-01e0e5cd694c
+:END:
+#+title: price impact
+ Suppose an automated market maker for exchanging coins X and Y. A trader selling  dx of coin X will lead
+ the mm to buy -dy = P dx of coin Y, with P exchange price.
+ Suppose that the liquidity x of X and y of Y are related by:
+
+ y = f(x),
+
+ Suppose the following Taylor expansion
+
+ a. dy = P dx + PI
+
+ where P is the exchange price dy/dx and PI = PI(dx, x, f) is the *price impact* of exchanging amount dx.
+ since PI ~ o(dx^2) (once fixed x and chosen a liqudity relation f) we can consider it negligible
+ when dx is small.
+ However when exchanging larger quantities PI(dx) has a relevant effect.
+ We can deduce more by writing PI as infinite Taylor series:
+
+ PI(dx, x, f) = \sum_i f^{(i)}(x) dx^i, i \ge 2 
+
+ we can immediatly see that if f^(i) = 0 for i \ge 2 there is no slippage. This is the case for the
+ so called constant price market maker, which fix the exchange price P between X & Y once for all:
+
+ - y = P * x + K
+ - PI(x, dx, C.Price.MM) = 0
+ 
+* Constant product market maker
+y = f(x) = K/x implies f'(x) = - K/x^2, so that
+
+PI (x, dx, C.Prod.MM) = K * \sum_i (-dx/x)^i, i \ge 2
+
+K is a constant, so that we see that price impact depends on the powers of the percentage of X liquidity
+lost during the order dx/x.
+
+
+
+* N coins case
+For a pool of N coins the C.Prod.MM & the C.Price.MM are written respectively:
+
+- \sum_j x_j = K * N
+- \prod_j x_j = K^N
+
+with j ranging from 1 to N.
+
+The exchange price of coin I for coin J is given by P_{ij} = - \partial x_i/ \partial x_j.
+

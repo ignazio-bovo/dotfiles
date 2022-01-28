@@ -1,0 +1,17 @@
+
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+#
+# Committer: ignazio <ignazio@hal.homenet.telecomitalia.it>
+#
+# On branch giza-olympia_fix_BundledVideoCreationAndNFTIssuance
+# Changes to be committed:
+#	modified:   node/src/chain_spec/mod.rs
+#	modified:   runtime/src/lib.rs
+#	modified:   runtime/src/primitives.rs
+#
+# Untracked files:
+#	distributor-node/
+#	storage-node-v2/
+#	tests/network-tests/output.json
+#

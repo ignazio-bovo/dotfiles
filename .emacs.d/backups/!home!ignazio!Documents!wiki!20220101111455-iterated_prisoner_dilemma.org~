@@ -1,0 +1,14 @@
+:PROPERTIES:
+:ID:       23b297a9-203e-4816-89f7-4da05b029b81
+:END:
+#+title: iterated prisoner dilemma
+
+The iterated [[id:05525bce-146f-42ea-9984-65cff20d5968][prisoner dilemma]] repeats the prisoner dilemma game over and over again. In this setting
+the best possible outcomes over the course of the whole series of game occur when both players cooperate
+continuously.
+To sum it up the best strategy is: on the first move cooperate. Then play whichever strategy the
+opponent played in the previous round (TIT-FOR-TAT TFT strategy). If the opponent betrays in the first
+round then TFT would defect in the second. Defection will be met with defection. It also pays
+to cooperate with TFT since it will cooperate in return. Denote A,B the players as above then
+a[n], b[n] are the action that resp A, B play at round n. if A plays TFT then:
+- TFT: a[1] = COOPERATE (i.e. silence), a[n] = b[n-1] for n > 1

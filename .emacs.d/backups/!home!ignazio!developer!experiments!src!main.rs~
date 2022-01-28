@@ -1,0 +1,9 @@
+#[derive(Default)]
+struct CreateChannelFixture {
+    origin: int,
+    name: str,
+}
+
+fn main() {
+    CreateChannelFixture::default();
+}

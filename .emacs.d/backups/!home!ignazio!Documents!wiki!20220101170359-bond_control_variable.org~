@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       cdb43709-fe08-4bbf-83c1-7a30afa7a065
+:END:
+#+title: bond control variable
+
+Sets a certain bond capacity or a target limit for much of the given asset the treasury
+wantst to take in over an allotted time. As the amount of bond sales gets closer to the capacity
+limit the discount of the bond decreases in order to ensure that the treasury accumulates the right
+amount.

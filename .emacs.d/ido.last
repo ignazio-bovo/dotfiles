@@ -1,0 +1,81 @@
+;;; -*- coding: utf-8 -*-
+
+;; ----- ido-last-directory-list -----
+(
+ ("/home/ignazio/" . ".emacs.d/")
+ ("/home/ignazio/Documents/" . "org/")
+ ("/home/ignazio/.emacs.d/straight/repos/" . "almost-mono-themes/")
+ ("/home/ignazio/.emacs.d/elpa/archives/" . "melpa/")
+ ("/home/ignazio/.emacs.d/elpa/" . "archives/")
+ ("/home/ignazio/.emacs.d/" . "straight/")
+ ("/home/ignazio/developer/joystream/tests/" . "network-tests/")
+ ("/home/ignazio/developer/joystream/" . "tests/")
+)
+
+;; ----- ido-work-directory-list -----
+(
+ "/home/ignazio/"
+ "/home/ignazio/Documents/org/"
+ "/home/ignazio/.emacs.d/custom/"
+ "/home/ignazio/.emacs.d/"
+ "/home/ignazio/.emacs.d/straight/repos/almost-mono-themes/"
+ "/home/ignazio/.emacs.d/elpa/archives/melpa/"
+ "/home/ignazio/Documents/"
+ "/home/ignazio/developer/joystream/utils/api-scripts/src/"
+ "/home/ignazio/developer/joystream/tests/network-tests/"
+)
+
+;; ----- ido-work-file-list -----
+(
+ ".emacs"
+ "todo.org"
+ "header-line.el [No match]"
+ "almost-mono-themes.el"
+ "archive-contents"
+ ".ICEauthority"
+ "LICENSE"
+)
+
+;; ----- ido-dir-file-cache -----
+(
+ ("/home/ignazio/.emacs.d/" (25050 51536 80448 863000) "recentf" "bookmarks" "history" "var/" ".lsp-session-v1" "elpa/" "auto-save-list/" "./" "url/" "#recentf#" ".org-generic-id-locations" "projectile-bookmarks.eld" "eshell/" "session.107111ede2a0674a2f16381273787450000000164090070" "request/" "persist/" "org-roam.db" "session.103680c81dcc67b97f163812693328862700000143420071" "ido.last" "emojis/" "session.10fe067b96fe228974163955991483122800000018850080" "../" "session.102e3e87b39ca6b239163812109884900200000082900070" ".org-id-locations" "backups/" "org-gcal/" "straight/" "session.1090097d12fb45415716393902885470500000022210078" "transient/")
+
+ ("/home/ignazio/" (25050 51537 32485 661000) ".nano-savehist" ".cargo/" ".xinitrc" ".node-gyp/" ".cache/" ".bash_logout" "node_modules/" ".ICEauthority" "Desktop/" "Music/" "./" "Documents/" ".backups/" ".emacs" ".volta/" "pswd.gpg" ".bash_profile" "Public/" "package.json" ".notes" ".yarn/" ".profile" ".mozilla/" ".pki/" ".emacs.d/" ".config/" "Videos/" ".Xmodmap" ".nano-recentf" "../" ".ssh/" ".local/" "package-lock.json" ".zoom/" "Downloads/" ".yarnrc" "Pictures/" "Templates/" ".bashrc" ".npm/" ".gtkrc-2.0" "developer/" ".bogofilter/" ".bash_history" ".rustup/" ".gnupg/")
+
+ ("/home/ignazio/developer/" (25028 47615 475413 332000) "fork-off-substrate/" "metadata.json" "./" "github_token" "../" "experiments/" "joystream/")
+
+ ("/home/ignazio/developer/joystream/" (25047 62461 749512 367000) ".gitignore" "types/" "yarn.lock" "README.md" ".git/" "utils/" "content-metadata-protobuf/" "runtime/" "node_modules/" "build-npm-packages.sh" ".editorconfig" "distributor-node/" "devops/" "./" "docker-compose.yml" "metadata-protobuf/" "LICENSE" "cli/" ".env" "Cargo.lock" "setup.sh" ".eslintrc.js" "package.json" "storage-node-v2/" "storage-node/" "joystream-node.Dockerfile" "tests/" "../" ".prettierrc.js" ".dockerignore" ".github/" "build-docker-images.sh" "target/" ".yarnclean" "pioneer.Dockerfile" "start.sh" "scripts/" "node/" "apps.Dockerfile" "runtime-modules/" "pioneer/" "Cargo.toml" "testnets/" "tsconfig.json" "query-node/")
+
+ ("/home/ignazio/developer/joystream/runtime-modules/" (24996 30702 79021 360000) "proposals/" "./" "hiring/" "stake/" "content/" "working-group/" "governance/" "forum/" "storage/" "memo/" "../" "membership/" "recurring-reward/" "token-minting/" "common/")
+
+ ("/home/ignazio/developer/joystream/runtime-modules/content/" (25048 10818 133859 333000) "src/" "./" "../" "Cargo.toml")
+
+ ("/home/ignazio/developer/joystream/runtime-modules/content/src/" (25048 16953 911077 441000) "permissions/" "lib.rs" "./" "tests/" "../" "errors.rs")
+
+ ("/home/ignazio/Documents/org/" (25012 56872 217884 384000) "gcal.org" "./" "todo.org" "../" "projects.org")
+
+ ("/home/ignazio/developer/joystream/tests/network-tests/" (25011 30152 612418 316000) "run-test-node.sh" ".gitignore" "run-test-scenario.sh" "node_modules/" "run-test-node-docker.sh" "run-tests.sh" "src/" "test-setup-new-chain.sh" "./" "assets/" "LICENSE" ".env" ".eslintrc.js" "package.json" "run-migration-tests.sh" "../" ".prettierignore" "get-host-ip.sh" "tsconfig.json")
+
+ ("/home/ignazio/developer/joystream/utils/api-scripts/src/" (25011 17502 382426 240000) "helpers/" "initialize-content-lead.ts" "dev-set-runtime-code.ts" "./" "script.ts" "../" "status.ts")
+
+ ("/home/ignazio/Documents/" (25011 39981 705235 58000) "./" "#todo.org#" "../" "org/")
+
+ ("/home/ignazio/.emacs.d/straight/repos/almost-mono-themes/" (25012 38293 238776 121000) "readme-files/" "almost-mono-gray-theme.el" "README.md" ".git/" "almost-mono-cream-theme.el" "./" "almost-mono-white-theme.el" "almost-mono-themes.el" "LICENSE" "almost-mono-black-theme.el" "../")
+
+ ("/home/ignazio/.emacs.d/custom/" (25012 43595 846173 784000) "./" "../")
+
+ ("/home/ignazio/.emacs.d/straight/repos/" (25012 37084 129729 738000) "corfu/" "emacs-request/" "ucs-utils/" "irony-mode/" "ligature.el/" "org-gcal.el/" "s.el/" "markdown-mode/" "f.el/" "tide/" "pkg-info/" "let-alist/" "flycheck-irony/" "unicode-fonts/" "list-utils/" "flycheck/" "el-get/" "vertico/" "consult/" "orderless/" "gntp.el/" "./" "lsp-ui/" "alert/" "use-package/" "xterm-color/" "exwm/" "hydra/" "almost-mono-themes/" "dash.el/" "font-utils/" "persist/" "xelb/" "melpa/" "persistent-soft/" "magit/" "straight.el/" "log4e/" "../" "project/" "with-editor/" "xref/" "emacs-deferred/" "pcache/" "diminish.el/" "emacsmirror-mirror/" "org/" "epl/" "projectile/" "marginalia/" "spinner/" "gnu-elpa-mirror/" "lsp-mode/" "selectrum/" "rust-mode/" "typescript.el/" "undo-tree/" "rustic/" "transient/" "ht.el/")
+
+ ("/home/ignazio/.emacs.d/straight/" (25012 38230 427138 443000) "./" "../" "build-cache.el" "repos/" "build/")
+
+ ("/home/ignazio/.emacs.d/elpa/archives/melpa/" (25012 37806 485582 179000) "./" "../" "archive-contents")
+
+ ("/home/ignazio/.emacs.d/elpa/archives/" (25012 37806 225583 676000) "gnu/" "./" "melpa/" "../" "org/")
+
+ ("/home/ignazio/.emacs.d/elpa/" (25012 37670 882362 904000) "./" "../" "archives/" "gnupg/")
+
+ ("/home/ignazio/developer/joystream/tests/" (24996 30702 227026 380000) "./" "../" "network-tests/")
+)
+
+;; ----- ido-unc-hosts-cache -----
+t
