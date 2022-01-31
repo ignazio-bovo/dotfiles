@@ -1,3 +1,0 @@
-(
- (:id "sha1:0990da7309489f030d1871654043b5dcc50f187a" :fingerprints ("sha1:c7:b0:cf:8e:af:18:d8:ae:cc:c3:2d:73:8b:8e:b4:49:70:eb:32:94") :host "151.236.218.173:993" :conditions (:no-host-match :verify-cert))
-)

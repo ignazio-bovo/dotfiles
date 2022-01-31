@@ -1,7 +1,0 @@
-* Create channel
-** Invalid combination of origin actor
-** actor is not curator or member
-** size of assets too big for any bucket
-** Invalid expected data size fee
-** not enough balance to upload assets
-** Invalid members id used for collaborators

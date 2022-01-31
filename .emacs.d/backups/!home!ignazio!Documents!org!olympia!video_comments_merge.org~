@@ -1,7 +1,0 @@
-* Types added
-* Storage elements added
-* Extrinsics added
-
-* clarify
-- [X] =VideoPostIdByVideoId= contains the first post, (namely the video description)
-- [X] bload bond computation, =bloat_bond = max(price_per_byte * post_size, cleanup_cost + cleanup_margin)=

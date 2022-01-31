@@ -112,8 +112,7 @@ if ! shopt -oq posix; then
   fi
 fi
 
-xmodmap ~/.Xmodmap
-. "$HOME/.cargo/env"
 export VOLTA_HOME="$HOME/.volta"
 export LOCAL_HOME="$HOME/.local"
 export PATH="$VOLTA_HOME/bin:$LOCAL_HOME/bin:$PATH"
+. "$HOME/.cargo/env"
