@@ -465,7 +465,6 @@
     (unicode-fonts-setup))
 
 (use-package almost-mono-themes
-  :if (display-graphic-p)
   :config
   (load-theme 'almost-mono-black t))
 
@@ -494,14 +493,13 @@
 (use-package org-dashboard)
 
 (menu-bar-mode 0)
-
+(fringe-mode -1)
 (if (display-graphic-p)
     (progn
       (setq visible-bell nil)
       (setq ring-bell-function 'ignore)
       (tool-bar-mode 0)
       (scroll-bar-mode 0)
-      (fringe-mode -1)
       (add-to-list 'default-frame-alist '(font . "Fira Code-11"))
       ))
 
@@ -530,10 +528,13 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(custom-safe-themes
+   '("ecc077ef834d36aa9839ec7997aad035f4586df7271dd492ec75a3b71f0559b3" "ffba0482d3548c9494e84c1324d527f73ea4e43fff8dfd0e48faa8fc6d5c2bc7" "cbd85ab34afb47003fa7f814a462c24affb1de81ebf172b78cb4e65186ba59d2" "8f5b54bf6a36fe1c138219960dd324aad8ab1f62f543bed73ef5ad60956e36ae" default))
  '(org-agenda-files nil))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(font-lock-function-name-face ((t (:foreground "yellow1" :weight bold))))
  '(highlight ((t (:background "blue" :foreground "white")))))

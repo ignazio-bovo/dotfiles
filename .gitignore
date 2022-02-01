@@ -4,11 +4,11 @@
 .emacs.d/elpa/*
 .emacs.d/emojis/*
 .emacs.d/url/*    
-zoom/*
+zoom*
 systemd/*
 pulseaudio/*
 ibus
 gtk-3.0/*
 dconf
-gh/*    
-    
+gh/*
+pulse/*
