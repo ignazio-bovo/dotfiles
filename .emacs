@@ -22,7 +22,7 @@
 ;; set package.el repositories
 (setq package-archives
 '(
-   ("org" . "https://orgmode.org/elpa/")
+   ("org" . "https:/mode.org/elpa/")
    ("gnu" . "https://elpa.gnu.org/packages/")
    ("melpa" . "https://melpa.org/packages/")
 ))
@@ -262,27 +262,27 @@
   :config
   (defconst org-time-stamp-formats '("<%Y-%m-%d %a>" . "<%Y-%m-%d %a %H:%M>")
     "Formats for `format-time-string' which are used for time stamps.")
-  (setq org-startup-indented t
+  (setq is-graphic-env (display-graphic-p)
+        org-startup-indented is-graphic-env
         org-ellipsis "..."
-        org-pretty-entities t
-        org-hide-emphasis-markers t
-        org-startup-with-inline-images t
+        org-pretty-entities is-graphic-env
+        org-hide-emphasis-markers is-graphic-env
+        org-startup-with-inline-images is-graphic-env
         org-image-actual-width '(300))
   
   (setq org-agenda-files
-        (list "~/Documents/org/todo.org"
-              "~/Documents/org/habits.org"
-              "~/Documents/org/projects.org"
-              "~/Documents/org/work.org"))
+        (list "~/Documents/todo.org"
+              "~/Documents/habits.org"
+              "~/Documents/projects.org"
+              "~/Documents/work.org"))
 
   (setq org-return-follows-link t)
   (setq org-capture-templates
-        '(("t" "Inbox Todo" entry (file "~/Documents/org/todo.org")
+        '(("t" "Inbox Todo" entry (file "~/Documents/todo.org")
            "* TODO %?" :empty-lines 1)
-          ("w" "Work Todo" entry (file "~/Documents/org/work.org")
-           "* TODO %?" :empty-lines 1)
-          ))  
-
+          ("w" "Work Todo" entry (file "~/Documents/work.org")
+           "* TODO %?" :empty-lines 1
+          )))
 
   (setq org-todo-keywords
         '((sequence "TODO(t)" "NEXT(n)" "HOLD(h)" "VERIFY(v)" "|" "DONE(d)" "CANCELED(c)")))
@@ -291,11 +291,11 @@
          ("C-c a" . org-agenda))
   
   :hook (org-mode . (lambda ()
-                      "Beautify Org Checkbox Symbol"
-                      (push '("[ ]" .  "☐") prettify-symbols-alist)
-                      (push '("[X]" . "☑" ) prettify-symbols-alist)
-                      (push '("[-]" . "❍" ) prettify-symbols-alist)
-                      (prettify-symbols-mode)))
+                      (if (display-graphic-p)
+                        (push '("[ ]" .  "☐") prettify-symbols-alist)
+                        (push '("[X]" . "☑" ) prettify-symbols-alist)
+                        (push '("[-]" . "❍" ) prettify-symbols-alist)
+                        (prettify-symbols-mode))))
   )
 
 (use-package org-superstar
@@ -326,7 +326,7 @@
          ("LaTeX" (mode . LaTeX/P))
          ("chat" (mode . erc-mode))
          ("Python" (mode . python-mode))
-         ("EXWM" (mode . exwm-mode))
+;         ("EXWM" (mode . exwm-mode))
          ("C/C++" (mode . cc-mode))
          ("Rust" (mode . rustic-mode))
          ("Doc" (mode . doc-view-mode))
@@ -419,13 +419,13 @@
 ;  (setq lsp-disabled-clients '(rls))
   :hook (lsp-mode . lsp-ui-mode))
 
-(use-package exwm
-  :if (display-graphic-p)
-  :config
-  (require 'exwm)
-  (require 'exwm-config)
-  (exwm-config-example)
-  )
+;; (use-package exwm
+;;   :if (display-graphic-p)
+;;   :config
+;;   (require 'exwm)
+;;   (require 'exwm-config)
+;;   (exwm-config-example)
+;;   )
 
 (use-package ligature
   :if (display-graphic-p)
@@ -524,3 +524,16 @@
 (use-package shr
   :custom
   (shr-use-fonts nil))
+
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(org-agenda-files nil))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(highlight ((t (:background "blue" :foreground "white")))))

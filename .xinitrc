@@ -7,3 +7,4 @@
 # invoke global X session script
 #. /etc/X11/Xsession
 #exec emacs
+#exec i3
