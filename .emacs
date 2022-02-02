@@ -274,12 +274,15 @@
         (list "~/Documents/todo.org"
               "~/Documents/habits.org"
               "~/Documents/projects.org"
+              "~/Documents/wip.org"
               "~/Documents/work.org"))
 
   (setq org-return-follows-link t)
   (setq org-capture-templates
         '(("t" "Inbox Todo" entry (file "~/Documents/todo.org")
            "* TODO %?" :empty-lines 1)
+          ("i" "Issue fix" entry (file "~/Documents/wip.org")
+           "* TODO %?\t%^G" :empty-lines 1)
           ("w" "Work Todo" entry (file "~/Documents/work.org")
            "* TODO %?" :empty-lines 1
           )))
@@ -523,6 +526,8 @@
   :custom
   (shr-use-fonts nil))
 
+(use-package docker)
+
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -537,4 +542,5 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(font-lock-function-name-face ((t (:foreground "yellow1" :weight bold))))
- '(highlight ((t (:background "blue" :foreground "white")))))
+ '(highlight ((t (:background "blue" :foreground "white"))))
+ '(org-verbatim ((t (:foreground "green")))))
