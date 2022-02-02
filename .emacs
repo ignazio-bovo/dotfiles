@@ -1,4 +1,3 @@
-
 (require 'package) ;; Emacs builtin
 
 ;; use streight.el
@@ -77,15 +76,14 @@
          ("M-g k" . consult-global-mark)
          ("M-g i" . consult-imenu)
          ("M-g I" . consult-imenu-multi)
-     ;; C-s search in file like swiper
-         ("C-s" . consult-line)      
+         ("C-s" . consult-line)
          ;; M-s bindings (search-map)
          ("M-s f" . consult-find)
          ("M-s g" . consult-grep)
          ;; Isearch integration
          ("M-s e" . consult-isearch-history))
 
-  ;; Enable automatic preview at point in the *Completions* buffer. 
+  ;; Enable automatic preview at point in the *Completions* buffer.
   :hook (completion-list-mode . consult-preview-at-point-mode)
 
   ;; The :init configuration is always executed (Not lazy)
@@ -269,7 +267,7 @@
         org-hide-emphasis-markers is-graphic-env
         org-startup-with-inline-images is-graphic-env
         org-image-actual-width '(300))
-  
+
   (setq org-agenda-files
         (list "~/Documents/todo.org"
               "~/Documents/habits.org"
@@ -292,7 +290,7 @@
 
   :bind (("C-c c" . org-capture)
          ("C-c a" . org-agenda))
-  
+
   :hook (org-mode . (lambda ()
                       (if (display-graphic-p)
                         (push '("[ ]" .  "☐") prettify-symbols-alist)
@@ -308,7 +306,7 @@
     (org-superstar-headline-bullets-list '("")))
 
 
-;; ibuffer 
+;; ibuffer
 (use-package ibuffer
   :config
   (add-hook 'ibuffer-mode-hook
@@ -316,7 +314,7 @@
 
   (require 'ibuf-ext)
 ;  (add-to-list 'ibuffer-never-show-predicates "^\\*[^iM]")
-  
+
   (setq ibuffer-saved-filter-groups
     (quote (("default"
          ("dired" (mode . dired-mode))
@@ -355,7 +353,7 @@
          (let ((recent-buffer-name (buffer-name)))
            (apply old-ibuffer arguments)
            (ibuffer-jump-to-buffer recent-buffer-name)))
-  
+
   (advice-add #'ibuffer :around #'my-ibuffer-recent-buffer)
   :bind
   (("C-x C-b" . ibuffer))
@@ -469,7 +467,8 @@
 
 (use-package almost-mono-themes
   :config
-  (load-theme 'almost-mono-black t))
+  (load-theme 'almost-mono-black t)
+  )
 
 (use-package org-roam
     :after org
@@ -528,19 +527,23 @@
 
 (use-package docker)
 
+(use-package erc
+  :bind (:map erc-mode-map
+              ("C-<return>" . newline)))
+
+(use-package eldoc
+  :diminish t)
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(cursor-type 'hbar)
  '(custom-safe-themes
-   '("ecc077ef834d36aa9839ec7997aad035f4586df7271dd492ec75a3b71f0559b3" "ffba0482d3548c9494e84c1324d527f73ea4e43fff8dfd0e48faa8fc6d5c2bc7" "cbd85ab34afb47003fa7f814a462c24affb1de81ebf172b78cb4e65186ba59d2" "8f5b54bf6a36fe1c138219960dd324aad8ab1f62f543bed73ef5ad60956e36ae" default))
- '(org-agenda-files nil))
+        '("8f5b54bf6a36fe1c138219960dd324aad8ab1f62f543bed73ef5ad60956e36ae" default)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(font-lock-function-name-face ((t (:foreground "yellow1" :weight bold))))
- '(highlight ((t (:background "blue" :foreground "white"))))
- '(org-verbatim ((t (:foreground "green")))))
+ )
