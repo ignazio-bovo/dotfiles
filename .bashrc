@@ -112,7 +112,9 @@ if ! shopt -oq posix; then
   fi
 fi
 
+export GPG_TTY=$(tty)
+
 export VOLTA_HOME="$HOME/.volta"
 export LOCAL_HOME="$HOME/.local"
-export PATH="$VOLTA_HOME/bin:$LOCAL_HOME/bin:$PATH"
-. "$HOME/.cargo/env"
+export PATH="$VOLTA_HOME/bin:$LOCAL_HOME/bin:$PATH:$HOME/.cargo/env"
+alias battery="upower -i /org/freedesktop/UPower/devices/battery_BAT0 | grep 'percentage'"

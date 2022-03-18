@@ -248,7 +248,7 @@
   (defun my-eshell-prompt-function ()
     (concat
      (propertize (shortened-path (eshell/pwd) 20) 'face `(:weight bold))
-     (propertize (if (= (user-uid) 0) " #" " λ") 'face `(:foreground "magenta"))
+     (propertize (if (= (user-uid) 0) " #" " $") 'face `(:foreground "magenta"))
      (propertize " " 'face `(:bold t)))
     )
 
@@ -290,21 +290,7 @@
 
   :bind (("C-c c" . org-capture)
          ("C-c a" . org-agenda))
-
-  :hook (org-mode . (lambda ()
-                      (if (display-graphic-p)
-                        (push '("[ ]" .  "☐") prettify-symbols-alist)
-                        (push '("[X]" . "☑" ) prettify-symbols-alist)
-                        (push '("[-]" . "❍" ) prettify-symbols-alist)
-                        (prettify-symbols-mode))))
   )
-
-(use-package org-superstar
-    :after org
-    :hook (org-mode . org-superstar-mode)
-    :if (display-graphic-p)
-    :custom
-    (org-superstar-headline-bullets-list '("")))
 
 ;; ibuffer
 (use-package ibuffer
@@ -397,6 +383,10 @@
   :hook ((before-save . tide-format-before-save) (typescript-mode . setup-tide-mode))
   )
 
+;; haskell
+(use-package haskell-mode
+  :mode ("//.hs" . haskell-mode))
+
 ;; rust
 (use-package rustic
   :mode ("//.rs$" . rustic-mode)
@@ -465,10 +455,12 @@
    :config
     (unicode-fonts-setup))
 
+;; console theme
 (use-package almost-mono-themes
+  :if (not (display-graphic-p))
   :config
-  (load-theme 'almost-mono-black t)
-  )
+   (load-theme 'almost-mono-black t)
+   )
 
 (use-package org-roam
     :after org
@@ -502,7 +494,7 @@
       (setq ring-bell-function 'ignore)
       (tool-bar-mode 0)
       (scroll-bar-mode 0)
-      (add-to-list 'default-frame-alist '(font . "Fira Code-11"))
+      (add-to-list 'default-frame-alist '(font . "Fira Code-12"))
       ))
 
 ;; tabs proper behavior
@@ -542,12 +534,16 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(custom-safe-themes
-   '("8f5b54bf6a36fe1c138219960dd324aad8ab1f62f543bed73ef5ad60956e36ae" default))
+   '("cbd85ab34afb47003fa7f814a462c24affb1de81ebf172b78cb4e65186ba59d2" "8f5b54bf6a36fe1c138219960dd324aad8ab1f62f543bed73ef5ad60956e36ae" default))
+ '(rustic-ansi-faces
+   ["black" "red3" "green3" "yellow3" "magenta2" "magenta3" "cyan3" "white"])
  '(rustic-cargo-check-arguments "")
- '(rustic-default-clippy-arguments "--all-features"))
+ '(rustic-default-clippy-arguments "--all-features")
+ '(rustic-default-test-arguments "--all-features"))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(font-lock-comment-face ((t (:foreground "red" :slant italic)))))
+ '(font-lock-comment-face ((t (:foreground "red" :slant italic))))
+ '(rustic-compilation-info ((t (:foreground "green")))))
